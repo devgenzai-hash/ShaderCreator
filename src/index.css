@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a1a;
+  color: #eaeaea;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+}
+
+/* React Flow customization */
+.react-flow__node {
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__background {
+  background-color: #1a1a2e !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f3460;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e94560;
+}
+
+/* Slider styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #0f3460;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e94560;
+  cursor: pointer;
+}
+
+/* Color picker */
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 2px solid #0f3460;
+  border-radius: 4px;
+}
+
+/* Drag and drop zones */
+.drop-zone {
+  border: 2px dashed #0f3460;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+  border-color: #e94560;
+  background: rgba(233, 69, 96, 0.05);
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 15px rgba(233, 69, 96, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px rgba(74, 158, 255, 0.3);
+}
+
+/* Animation */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(233, 69, 96, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(233, 69, 96, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
